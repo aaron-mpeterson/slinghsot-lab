@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<image schemaversion="7.5" name="node-image-test">
+    <description type="system">
+        <author>Aaron Peterson</author>
+        <contact>aaron.peterson@HPE.com</contact>
+        <specification>Diskless compute node, netboot</specification>
+    </description>
+    <preferences>
+        <version>0.1.0</version>
+        <packagemanager>zypper</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us</keytable>
+        <timezone>UTC</timezone>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <type image="kis" filesystem="squashfs" kernelcmdline="console=ttyS0,115200"/>
+    </preferences>
+    <users>
+        <user password="!" home="/root" name="root" groups="root"/>
+    </users>
+    <repository type="rpm-md" alias="leap-oss">
+        <source path="https://download.opensuse.org/distribution/leap/16.0/repo/oss"/>
+    </repository>
+    <packages type="image">
+        <package name="kernel-default"/>
+        <package name="systemd"/>
+        <package name="systemd-network"/>
+        <package name="dracut"/>
+        <package name="dracut-network"/>
+        <package name="openssh"/>
+        <package name="iproute2"/>
+        <package name="iputils"/>
+        <package name="pciutils"/>
+        <package name="ethtool"/>
+        <package name="curl"/>
+        <package name="less"/>
+        <package name="vim"/>
+        <package name="procps"/>
+        <package name="which"/>
+        <package name="timezone"/>        
+    </packages>
+    <packages type="bootstrap">
+        <package name="udev"/>
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="cracklib-dict-full"/>
+        <package name="ca-certificates"/>
+        <package name="ca-certificates-mozilla"/>
+    </packages>
+</image>
