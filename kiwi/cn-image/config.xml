@@ -27,7 +27,6 @@
         <package name="systemd"/>
         <package name="systemd-network"/>
         <package name="dracut"/>
-        <package name="dracut-network"/>
         <package name="openssh"/>
         <package name="iproute2"/>
         <package name="iputils"/>
