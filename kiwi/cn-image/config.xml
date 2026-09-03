@@ -7,7 +7,7 @@
         <specification>Diskless compute node, netboot</specification>
     </description>
     <preferences>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
@@ -36,8 +36,10 @@
         <package name="less"/>
         <package name="vim"/>
         <package name="procps"/>
+	<package name="tar"/>
         <package name="which"/>
         <package name="timezone"/>        
+	<package name="dhcp-client"/>
     </packages>
     <packages type="bootstrap">
         <package name="udev"/>

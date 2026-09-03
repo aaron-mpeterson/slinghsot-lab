@@ -9,7 +9,6 @@ echo "Configure image: [$kiwi_iname]..."
 
 systemctl enable sshd
 systemctl enable systemd-networkd
-systemctl enable systemd-resolved
 
 # Overlay file permissions — git doesn't preserve modes reliably
 chmod 700 /root/.ssh
